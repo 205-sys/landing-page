@@ -2,10 +2,16 @@
 
 vmDeploy(
     appName: 'landing',
-    registry: 'docker.io',
-    registryUser: 'your-dockerhub-user',
-    registryCredId: 'dockerhub-cred',
-    imageName: 'nginx-app',
+
+    registry: 'asia-southeast1-docker.pkg.dev',
+    registryCredId: 'gcp-registry',
+
+    imageName: 'cluster-app-prod/demo-reg/landing',
+
+    sshCredId: 'vm-ssh-key',
+    vmHost: 'YOUR_VM_IP',
+    vmUser: 'ubuntu',
+
     containerPort: '80',
     hostPort: '80'
 )
