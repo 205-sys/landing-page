@@ -1,12 +1,11 @@
 @Library('common-lib@main') _
 
-dockerComposeDeploy(
-    appServer: '10.10.1.2',
-    appUser: 'my-vm-01',
-    appDir: '/var/www/myapp',
-    repoUrl: 'https://github.com/205-sys/nginx.git',
-    branch: 'main',
-    composeCommand: 'docker compose',
-    imageTag: env.BUILD_NUMBER,
-    rollback: false
+vmDeploy(
+    appName: 'landing',
+    registry: 'docker.io',
+    registryUser: 'your-dockerhub-user',
+    registryCredId: 'dockerhub-cred',
+    imageName: 'nginx-app',
+    containerPort: '80',
+    hostPort: '80'
 )
