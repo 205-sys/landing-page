@@ -2,11 +2,7 @@
 
 vmDeploy(
     appName: 'landing',
-
-    registry: 'asia-southeast1-docker.pkg.dev',
-    registryCredId: 'gcp-registry',
-
-    imageName: 'cluster-app-prod/demo-reg/landing',
+    imageName: 'landing-page',
 
     sshCredId: 'vm-ssh-key',
     vmHost: 'YOUR_VM_IP',
