@@ -1,12 +1,14 @@
-withCredentials([
-    usernamePassword(
-        credentialsId: dockerhub-cred,
-        usernameVariable: 'DOCKER_USER',
-        passwordVariable: 'DOCKER_PASS'
-    )
-]) {
-    sh """
-        echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
-    """
-}
-``
+@Library('common-lib@main') _
+
+deployCompose(
+    sshCredId: 'vm-ssh-key',
+    vmHost: 'YOUR_VM_IP',
+    vmUser: 'ubuntu',
+
+    appDir: '/home/ubuntu/app',
+
+    image: "khmerwiki/landing-page:${env.BUILD_NUMBER}",
+    serviceName: 'landing',
+
+    dockerCredId: 'dockerhub-cred'
+)
