@@ -1,13 +1,14 @@
 @Library('common-lib@main') _
 
 deployCompose(
-    sshCredId: 'vm-web-app',
+    sshCredId: 'vm-web-app-key',
     vmHost: '10.1.1.7',
     vmUser: 'web-app',
 
-    appDir: '/home/ubuntu/app',
+    appDir: '/home/&{USER}/app',
 
     image: "khmerwiki/landing-page:${env.BUILD_NUMBER}",
+
     serviceName: 'landing',
 
     dockerCredId: 'dockerhub-cred'
