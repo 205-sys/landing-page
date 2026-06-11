@@ -5,7 +5,7 @@ deployCompose(
     vmHost: '10.1.1.7',
     vmUser: 'web-app',
 
-    appDir: '/home/${USER}/app',
+    appDir: '/home/web-app/app',
 
     image: "khmerwiki/landing-page:${env.BUILD_NUMBER}",
 
