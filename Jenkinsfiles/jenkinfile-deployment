@@ -1,7 +1,7 @@
 @Library('common-lib@main') _
 
 deployCompose(
-    sshCredId: 'vm-web-app-key',
+    sshCredId: 'vm-web-app',
     vmHost: '10.1.1.7',
     vmUser: 'web-app',
 
