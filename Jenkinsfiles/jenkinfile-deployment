@@ -3,7 +3,7 @@
 deployCompose(
     sshCredId: 'vm-web-app',
     vmHost: '10.1.1.7',
-    vmUser: 'web-app',
+    vmUser: 'bunsengsan205',
 
     appDir: '/home/bunsengsan205/app',
 
