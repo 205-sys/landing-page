@@ -1,7 +1,6 @@
 @Library('jenkins-shared-library') _
 
 dockerDeployPipeline(
-    image: "khmerwiki/landing-page:${BUILD_NUMBER}",
     serviceName: "landing",
     vmHost: "10.1.1.7",
     vmUser: "web-app",
