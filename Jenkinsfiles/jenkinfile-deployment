@@ -7,7 +7,7 @@ deployCompose(
 
     appDir: '/srv/app',
 
-    image: "khmerwiki/landing-page:29",
+    image: "khmerwiki/landing-page:${BUILD_NUMBER}",
 
     serviceName: 'landing',
 
