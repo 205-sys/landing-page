@@ -7,6 +7,5 @@ dockerDeployPipeline(
     appDir: "/srv/app",
     dockerCredId: 'dockerhub-cred',
     sshCredId: 'vm-web-app',
-
     rollback: true
 )
