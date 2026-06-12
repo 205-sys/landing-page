@@ -3,7 +3,7 @@
 dockerDeployPipeline(
     image: "khmerwiki/landing-page:${BUILD_NUMBER}",
     serviceName: "landing",
-    vmHost: "your-vm-ip",
+    vmHost: "10.1.1.7",
     vmUser: "web-app",
     appDir: "/srv/app",
     dockerCredId: 'dockerhub-cred',
