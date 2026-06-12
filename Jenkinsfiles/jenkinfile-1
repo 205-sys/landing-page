@@ -1,0 +1,11 @@
+@Library('jenkins-shared-library') _
+
+dockerDeployPipeline(
+    image: "khmerwiki/landing-page:${BUILD_NUMBER}",
+    serviceName: "landing",
+    vmHost: "your-vm-ip",
+    vmUser: "web-app",
+    appDir: "/srv/app",
+    dockerCredId: 'dockerhub-cred',
+    sshCredId: 'vm-web-app'
+)
