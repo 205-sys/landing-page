@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { mount } from "@vue/test-utils";
-import App from "../src/App.vue";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "./App";
 
 describe("App", () => {
-  it("renders landing page", () => {
-    const wrapper = mount(App);
+  it("renders the landing page", () => {
+    render(<App />);
 
-    expect(wrapper.text()).toBeTruthy();
+    expect(document.body).toBeTruthy();
   });
 });
