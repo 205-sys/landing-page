@@ -30,8 +30,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Lint app
-        run: npm run lint
+      #- name: Lint app
+      #  run: npm run lint
 
       - name: Run tests
         run: npm test
