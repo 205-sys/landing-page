@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import App from "../src/App";
+import App from "../src/App.jsx";
+
 describe("App", () => {
-  it("renders the landing page", () => {
+  it("renders landing page title", () => {
     render(<App />);
 
-    expect(document.body).toBeTruthy();
+    expect(screen.getByText(/Landing Page/i)).toBeInTheDocument();
   });
 });
